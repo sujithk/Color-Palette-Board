@@ -1,0 +1,20 @@
+<table class="userboard">
+  <thead>
+   <tr>
+    <td>No</td>
+    <td>User</td>
+    <td>Tiles Colored</td>
+    <td>Fav Color</td>
+   </tr>
+  </thead>
+  <tbody>
+   <%@users.each_with_index do |user,index|%>
+    <tr>
+     <td><%= index+=1%>.</td>
+     <td><%= user.username%></td>
+     <td><%= user.scount%></td>
+     <td style="background-color: <%= user.find_favourite_color%>"></td>
+    </tr>
+   <%end%>
+  </tbody>
+</table>
