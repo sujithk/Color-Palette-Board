@@ -43,13 +43,17 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
-  gem 'rspec-rails', '~> 3.5'
+  gem 'rspec-rails', '~> 3.8'
 end
 
 group :test do
+  # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'factory_girl_rails', '~> 4.0'
-  gem 'shoulda-matchers', '~> 3.1'
   gem 'database_cleaner'
+  gem 'chromedriver-helper'
+  gem 'selenium-webdriver'
+  gem 'shoulda-matchers', '4.0.0.rc1'
+  gem 'rails-controller-testing'
 end
 
 group :development do
